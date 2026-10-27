@@ -82,7 +82,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .sec-h .zh{display:block;font-size:13px;letter-spacing:.36em;padding-left:.36em;color:var(--ink-2);margin-top:4px}
 .sec-h .orn{margin-top:12px}
 .mission{text-align:center}
-.mission p{margin:0 0 12px}
+.mission p{margin:0 0 12px;text-wrap:balance}
+.mission .ln{display:block;text-wrap:balance}
+.mission .nw{white-space:nowrap}
+@media (max-width:359px){.mission .nw{white-space:normal}}
 .mission p.zh{font-size:15.5px;line-height:2;font-weight:400}
 .mission p.en{font-size:17px;line-height:1.6;font-style:italic;font-weight:400;color:var(--ink)}
 .mission .motto{margin-top:18px;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
@@ -167,8 +170,8 @@ footer .org{font-size:15px;letter-spacing:.3em;color:var(--gold);font-weight:600
     <div class="sec">
       <div class="sec-h"><div class="en">Our Mission</div><span class="zh">我们的宗旨</span><div class="orn">◆</div></div>
       <div class="mission">
-        <p class="zh">汇聚南湖及周边地区的华人企业家与专业人士，以交流学习为宗旨，相互扶持，并为下一代搭建成长与实践的平台。我们秉持务实、可靠、以家庭为本的理念。</p>
-        <p class="en">A-CAST brings together Chinese-American entrepreneurs and professionals across the DFW area to learn from one another, support one another, and build a platform for the next generation. Grounded, trustworthy, and family-centered, the Club is dedicated to learning and connection.</p>
+        <p class="zh"><span class="ln"><span class="nw">汇聚 DFW 地区的华人企业家与专业人士，</span><span class="nw">以交流学习为宗旨，</span><span class="nw">相互扶持，</span><span class="nw">并为下一代搭建成长与实践的平台。</span></span><span class="ln"><span class="nw">我们秉持务实、可靠、以家庭为本的理念。</span></span></p>
+        <p class="en">A-CAST brings together Chinese-American entrepreneurs and professionals across the DFW area to learn from one another, support one another, and build a platform for the next generation. Grounded, trustworthy, and <span class="nw">family-centered</span>, the Club is dedicated to learning and connection.</p>
         <div class="motto"><span>Connect</span><span>Share</span><span>Build</span></div>
       </div>
     </div>
