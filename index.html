@@ -56,6 +56,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .venue{margin-top:14px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;line-height:1.7}
 .venue span{text-transform:none;letter-spacing:.06em;font-weight:400;color:var(--ink-2);font-size:14.5px}
 .host{margin-top:22px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-2)}
+.attire{margin-top:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+.attire .zh{display:block;text-transform:none;font-size:12.5px;letter-spacing:.2em;padding-left:.2em;color:var(--ink-2);margin-top:2px}
 .seal{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);width:56px;height:56px;border-radius:50%;
  background:radial-gradient(circle at 35% 30%,#e9d08a,#b8963e 60%,#8d6f24);box-shadow:0 6px 16px rgba(60,45,20,.35),inset 0 0 0 1px rgba(255,255,255,.35);
  display:grid;place-items:center;font-weight:600;color:#3a2a08;font-size:13px;letter-spacing:.08em;transition:transform .6s,opacity .6s}
@@ -88,9 +90,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .mission p{margin:0 0 12px;text-wrap:balance}
 .mission .ln{display:block;text-wrap:balance}
 .mission .nw{white-space:nowrap}
-@media (max-width:359px){.mission .nw{white-space:normal}}
+@media (max-width:369px){.mission .nw{white-space:normal}}
 .mission p.zh{font-size:15.5px;line-height:2;font-weight:400}
-.mission p.en{font-size:17px;line-height:1.6;font-style:italic;font-weight:400;color:var(--ink)}
+.mission p.en{font-size:17px;line-height:1.6;font-style:italic;font-weight:400;color:var(--ink);text-wrap:pretty}
 .mission .motto{margin-top:18px;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .mission .motto span+span::before{content:"·";margin:0 12px;color:var(--line)}
 
@@ -110,12 +112,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .sp .name{font-size:25px;font-weight:500;line-height:1.2;margin-top:6px;letter-spacing:.02em}
 .sp .name .zh{font-size:22px;font-weight:400}
 .sp .ti{margin-top:8px}
-.sp .ti .en{font-style:italic;font-size:17px;line-height:1.35;font-weight:400}
+.sp .ti .en{font-style:italic;font-size:17px;line-height:1.35;font-weight:400;text-wrap:balance}
 .sp .ti .zh{font-size:14px;line-height:1.7;color:var(--ink-2);margin-top:4px}
 
 .details{display:grid;grid-template-columns:1fr 1fr;gap:0}
 .details .cell{text-align:center;padding:14px 10px;display:flex;flex-direction:column}
 .details .cell+.cell{border-left:1px solid rgba(168,135,58,.3)}
+.details .dress{grid-column:1/-1;border-left:0!important;border-top:1px solid rgba(168,135,58,.3);margin-top:6px;padding-top:16px}
+.details .dress .v{flex:none}
 .details .k{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .details .v{font-size:19px;font-weight:500;line-height:1.3;margin-top:8px;flex:1;display:flex;flex-direction:column;justify-content:center}
 .details .nw{white-space:nowrap}
@@ -155,6 +159,7 @@ footer .org{font-size:15px;letter-spacing:.3em;color:var(--gold);font-weight:600
         <div class="purpose zh">创业学院筹备启动活动<span class="en">Founding Kickoff of the Entrepreneurship Academy</span></div>
         <div class="when">Saturday, <span class="b">November 14</span>, 2026<br>5:00 – 8:30 PM</div>
         <div class="venue">Bent Creek Neighborhood Center<br><span>1250 Bent Creek Dr, Southlake</span></div>
+        <div class="attire">Dress Code · Business Casual<span class="zh">着装：商务休闲</span></div>
         <div class="host">Hosted by A-CAST</div>
         <div class="seal" aria-hidden="true">A·C</div>
       </div>
@@ -175,8 +180,8 @@ footer .org{font-size:15px;letter-spacing:.3em;color:var(--gold);font-weight:600
     <div class="sec">
       <div class="sec-h"><div class="en">Our Mission</div><span class="zh">我们的宗旨</span><div class="orn">◆</div></div>
       <div class="mission">
-        <p class="zh"><span class="ln"><span class="nw">汇聚 DFW 地区的华人企业家与专业人士，</span><span class="nw">以交流学习为宗旨，</span><span class="nw">相互扶持，</span><span class="nw">并为下一代搭建成长与实践的平台。</span></span><span class="ln"><span class="nw">我们秉持务实、可靠、以家庭为本的理念。</span></span></p>
-        <p class="en">A-CAST brings together Chinese-American entrepreneurs and professionals across the DFW area to learn from one another, support one another, and build a platform for the next generation. Grounded, trustworthy, and <span class="nw">family-centered</span>, the Academy is dedicated to learning and connection.</p>
+        <p class="zh"><span class="ln"><span class="nw">秉持诚信、务实、以家庭福祉为本的理念，</span><span class="nw">汇聚和团结 DFW 地区华人专业人士与企业家，</span><span class="nw">搭建交流学习、互助合作的平台，</span><span class="nw">共同为下一代创造成长与实践的机会。</span></span></p>
+        <p class="en">Guided by integrity, pragmatism, and a commitment to family <span class="nw">well-being</span>, <span class="nw">A-CAST</span> brings together <span class="nw">Chinese-American</span> professionals and entrepreneurs across the DFW area, building a platform for learning and mutual support, and creating opportunities for the next generation to grow and gain <span class="nw">real-world</span> experience.</p>
         <div class="motto"><span>Connect</span><span>Share</span><span>Build</span></div>
       </div>
     </div>
@@ -184,12 +189,12 @@ footer .org{font-size:15px;letter-spacing:.3em;color:var(--gold);font-weight:600
     <div class="sec">
       <div class="sec-h"><div class="en">Programme</div><span class="zh">晚宴流程</span><div class="orn">◆</div></div>
       <ol class="agenda">
-        <li><div class="t">5:00 – 5:50</div><div><div class="en">Reception &amp; Networking</div><div class="zh">签到 · 迎宾 · 自由交流</div></div></li>
-        <li><div class="t">5:50 – 6:00</div><div><div class="en">Opening Keynote</div><div class="zh">开场主旨 · 杨少华教授</div></div></li>
-        <li><div class="t">6:00 – 6:45</div><div><div class="en">Dinner</div><div class="zh">晚餐 · 由 Takara 提供</div></div></li>
-        <li><div class="t">6:45 – 7:45</div><div><div class="en">Keynote Speeches</div><div class="zh">主旨演讲 · Dupont Zhou / 张家明 / 赵芳 / Jeff Wang</div><div class="sub"><i>15 minutes each</i> · 每位 15 分钟</div></div></li>
-        <li><div class="t">7:45 – 8:00</div><div><div class="en">What's Next · Survey · Group Photo</div><div class="zh">学院下一步 · 现场问卷 · 合影</div></div></li>
-        <li><div class="t">8:00 – 8:30</div><div><div class="en">Dessert, Open Q&amp;A &amp; Networking</div><div class="zh">甜点 · 自由提问 · 自由交流</div><div class="sub">八点后来宾可自行安排离场<br><i>Guests may depart at their leisure after 8:00</i></div></div></li>
+        <li><div class="t">5:00 – 5:30</div><div><div class="en">Reception &amp; Networking</div><div class="zh">签到 · 迎宾 · 自由交流</div></div></li>
+        <li><div class="t">5:30 – 5:50</div><div><div class="en">Opening Keynote</div><div class="zh">开场主旨 · 杨少华教授</div></div></li>
+        <li><div class="t">5:50 – 6:30</div><div><div class="en">Dinner</div><div class="zh">晚餐 · 由 Takara 赞助提供</div></div></li>
+        <li><div class="t">6:30 – 8:00</div><div><div class="en">Keynote Speeches</div><div class="zh">主旨演讲 · 赵芳 / 张家明 / Jeff Wang / Dupont Zhou</div><div class="sub"><i>About 20 minutes each</i> · 每位约 20 分钟</div></div></li>
+        <li><div class="t">8:00 – 8:15</div><div><div class="en">What's Next · Survey · Group Photo</div><div class="zh">学院下一步 · 现场问卷 · 合影</div></div></li>
+        <li><div class="t">8:15 – 8:30</div><div><div class="en">Dessert, Open Q&amp;A &amp; Networking</div><div class="zh">甜点 · 自由提问 · 自由交流</div><div class="sub">八点一刻后来宾可自行安排离场<br><i>Guests may depart at their leisure after 8:15</i></div></div></li>
       </ol>
     </div>
 
@@ -198,14 +203,14 @@ footer .org{font-size:15px;letter-spacing:.3em;color:var(--gold);font-weight:600
       <div class="spk">
         <div class="sp"><div class="role">Opening Keynote · 开场</div><div class="name"><span class="zh">杨少华</span></div>
           <div class="ti"><div class="en">Why Southlake Needs a Family Entrepreneurship Academy: Mission &amp; Responsibility</div><div class="zh">为什么南湖需要一个家庭创业学院：使命与责任</div></div></div>
-        <div class="sp"><div class="role">Keynote · 制造业</div><div class="name">Dupont Zhou</div>
-          <div class="ti"><div class="en">Small Manufacturers in the American Economy: Where They Stand, What's Next</div><div class="zh">美国经济里的小制造商：现状、挑战与机会</div></div></div>
-        <div class="sp"><div class="role">Keynote · 品牌</div><div class="name"><span class="zh">张家明</span></div>
-          <div class="ti"><div class="en">From Zero to $100 Million: Three Battlegrounds of Brand Growth</div><div class="zh">从 0 到 1 亿美元：品牌增长的三个战场</div></div></div>
         <div class="sp"><div class="role">Keynote · 餐饮</div><div class="name"><span class="zh">赵芳</span></div>
           <div class="ti"><div class="en">The U.S. Restaurant Market, Seen from the Front Line</div><div class="zh">春江水暖：一线经营者眼中的美国餐饮市场</div></div></div>
-        <div class="sp"><div class="role">Closing Keynote · 收尾</div><div class="name">Jeff Wang</div>
+        <div class="sp"><div class="role">Keynote · 品牌</div><div class="name"><span class="zh">张家明</span></div>
+          <div class="ti"><div class="en">From Zero to $100 Million: Three Battlegrounds of Brand Growth</div><div class="zh">从 0 到 1 亿美元：品牌增长的三个战场</div></div></div>
+        <div class="sp"><div class="role">Keynote · 传承</div><div class="name">Jeff Wang</div>
           <div class="ti"><div class="en">Passing the Torch: Two Generations of Chinese Americans</div><div class="zh">薪火相传：华裔两代人的奋斗与传承</div></div></div>
+        <div class="sp"><div class="role">Keynote · 制造业</div><div class="name">Dupont Zhou</div>
+          <div class="ti"><div class="en">Small Manufacturers in the American Economy: Where They Stand, What's Next</div><div class="zh">美国经济里的小制造商：现状、挑战与机会</div></div></div>
       </div>
     </div>
 
@@ -214,6 +219,7 @@ footer .org{font-size:15px;letter-spacing:.3em;color:var(--gold);font-weight:600
       <div class="details">
         <div class="cell"><div class="k">Date &amp; Time</div><div class="v"><span>Saturday</span><span>Nov 14, 2026</span></div><div class="v2">5:00 – 8:30 PM<br><span class="nw">周六下午五点</span><span class="nw">至晚上八点半</span></div></div>
         <div class="cell"><div class="k">Venue</div><div class="v"><span>Bent Creek</span><span>Neighborhood Center</span></div><div class="v2">1250 Bent Creek Dr<br>Southlake, TX</div></div>
+        <div class="cell dress"><div class="k">Dress Code</div><div class="v">Business Casual</div><div class="v2">着装：商务休闲</div></div>
       </div>
     </div>
 
